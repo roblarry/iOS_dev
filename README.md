@@ -1,2 +1,0 @@
-# ooooios
-Randomness iOS
