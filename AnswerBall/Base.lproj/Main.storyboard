@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pr7-Bw-6Uv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+    </dependencies>
+    <scenes>
+        <!--Shake for Answer-->
+        <scene sceneID="ARX-xu-gqf">
+            <objects>
+                <viewController id="J8m-qe-DpR" customClass="MainVC" customModule="AnswerBall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xhY-X4-4hx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPA-jE-hRf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AaE-ix-flM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ball" translatesAutoresizingMaskIntoConstraints="NO" id="sku-O4-j0F">
+                                <rect key="frame" x="128" y="128" width="345" height="345"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="345" id="B03-19-ICg"/>
+                                    <constraint firstAttribute="width" constant="345" id="KXX-hW-ckd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz5-t8-8hC">
+                                <rect key="frame" x="167" y="211" width="267" height="178"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="qhe-Qd-aFm"/>
+                                    <constraint firstAttribute="width" constant="267" id="xR4-L6-0vc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgG-bH-dEb">
+                                <rect key="frame" x="186" y="535" width="229" height="45"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="p8L-Xf-v0Y"/>
+                                </constraints>
+                                <state key="normal" title="Get Answer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAnswerTapped:" destination="J8m-qe-DpR" eventType="touchUpInside" id="UDo-SO-tUn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerY" secondItem="AaE-ix-flM" secondAttribute="centerY" id="3ZH-Wx-XZE"/>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerX" secondItem="AaE-ix-flM" secondAttribute="centerX" id="AQH-Rs-jcK"/>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerX" secondItem="AaE-ix-flM" secondAttribute="centerX" id="FNy-XR-0CY"/>
+                            <constraint firstAttribute="bottom" secondItem="HgG-bH-dEb" secondAttribute="bottom" constant="20" symbolic="YES" id="MLe-DX-qzd"/>
+                            <constraint firstItem="sku-O4-j0F" firstAttribute="centerX" secondItem="AaE-ix-flM" secondAttribute="centerX" id="NQF-Cv-0yt"/>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerY" secondItem="AaE-ix-flM" secondAttribute="centerY" id="Vzs-6w-39V"/>
+                            <constraint firstItem="sku-O4-j0F" firstAttribute="centerY" secondItem="AaE-ix-flM" secondAttribute="centerY" id="XZo-Ca-sfW"/>
+                            <constraint firstItem="HgG-bH-dEb" firstAttribute="top" secondItem="sku-O4-j0F" secondAttribute="bottom" constant="62" id="bSR-aa-HUZ"/>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerY" secondItem="AaE-ix-flM" secondAttribute="centerY" id="mip-xc-UoR"/>
+                            <constraint firstItem="Nz5-t8-8hC" firstAttribute="centerX" secondItem="AaE-ix-flM" secondAttribute="centerX" id="oWN-xO-vW8"/>
+                            <constraint firstItem="HgG-bH-dEb" firstAttribute="centerX" secondItem="sku-O4-j0F" secondAttribute="centerX" id="sLa-0f-WsR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shake for Answer" id="7wl-Fu-83j"/>
+                    <connections>
+                        <outlet property="label" destination="Nz5-t8-8hC" id="NAH-cM-3O0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsg-55-ydh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wR0-mJ-Yhq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pr7-Bw-6Uv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xy9-I2-noM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J8m-qe-DpR" kind="relationship" relationship="rootViewController" id="XrM-MU-h6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWN-1J-uCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ball" width="345" height="345"/>
+    </resources>
+</document>
